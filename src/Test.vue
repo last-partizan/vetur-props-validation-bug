@@ -1,13 +1,14 @@
 <template>
   <div>
-    {{ fo }}
+    {{ foo }}
   </div>
 </template>
 
 <script>
-import * as _ from 'lodash'
-
 export default {
-  props: ['foo', 'bar']
+  props: {
+    foo: String,
+    bar: {type: String, required: false},
+  }
 }
 </script>
