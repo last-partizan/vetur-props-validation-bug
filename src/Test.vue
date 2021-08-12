@@ -1,15 +1,16 @@
 <template>
-  <div>
-    {{ foo }}
-  </div>
+  <button @click="page = newPage">
+    Switch to page {{ newPage }}
+  </button>
 </template>
 
 <script>
 export default {
-  props: {
-    foo: String,
-    bar: {type: String, required: false},
-    camelCaseBar: {type: String, required: false},
-  }
+  data() {
+    return {
+      page: "home",
+      newPage: "products",
+    }
+  },
 }
 </script>
